@@ -1,15 +1,26 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import styles from './About.module.css';
+import React from "react";
+import { useLottie } from "lottie-react";
+import { motion } from "framer-motion";
+
+import styles from "./About.module.css";
+import computerAnimation from "../assets/computerAnimation.json";
 
 const About = () => {
+  const options = {
+    animationData: computerAnimation,
+    loop: true,
+    autoplay: true,
+  };
+
+  const { View } = useLottie(options);
+
   return (
     <section id="about" className={styles.aboutSection}>
       <motion.div
         className={styles.container}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         <div className={styles.headingWrapper}>
@@ -22,28 +33,38 @@ const About = () => {
         <div className={styles.content}>
           <div className={styles.textWrapper}>
             <p>
-              I am a MERN Stack Developer and MCA student at Chitkara University 
-              with a 9.4 CGPA. I thrive on architecting full-stack applications 
-              that combine clean code with exceptional user experiences.
+              Hello! I'm Praveen, a passionate MERN Stack Developer currently pursuing my 
+              MCA at Chitkara University. I specialize in building highly interactive and 
+              scalable web applications that provide seamless user experiences.
             </p>
+
             <p>
-              Currently, I'm interning at LBM Solution in Mohali, contributing to 
-              real-world projects since February 2026. This role has sharpened my 
-              ability to design scalable APIs and responsive interfaces under 
-              professional standards.
+              My journey in web development started with a curiosity for how things work 
+              on the internet, which quickly evolved into a professional pursuit. I'm 
+              dedicated to writing clean, efficient code and staying up-to-date with 
+              the latest industry standards.
             </p>
+
             <p>
-              During my journey, I built LocalServe, a comprehensive service 
-              booking platform, and NPS Vision, an innovative AR-based e-commerce 
-              website. These projects reflect my commitment to exploring new 
-              technologies and delivering impactful digital products.
+              Beyond coding, I'm always looking to learn new technologies and improve 
+              my problem-solving skills. Here are a few technologies I've been working with recently:
             </p>
+
+            <ul className={styles.skillsList}>
+              <li>React.js & Next.js</li>
+              <li>Node.js & Express</li>
+              <li>MongoDB & PostgreSQL</li>
+              <li>JavaScript (ES6+)</li>
+              <li>TypeScript</li>
+              <li>Tailwind CSS</li>
+            </ul>
           </div>
-          
+
           <div className={styles.imageWrapper}>
             <div className={styles.imageBox}>
-              <div className={styles.imageOverlay}></div>
-              <img src="https://via.placeholder.com/400x400/0a0a0a/00B4FF?text=P" alt="Praveen Kumar Sharma" />
+              <div className={styles.lottieContainer}>
+                {View}
+              </div>
             </div>
           </div>
         </div>
@@ -53,3 +74,4 @@ const About = () => {
 };
 
 export default About;
+

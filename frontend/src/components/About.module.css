@@ -41,6 +41,7 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 50px;
+  align-items: flex-start;
 }
 
 .textWrapper {
@@ -53,6 +54,33 @@
   margin-bottom: 1.5rem;
 }
 
+.skillsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0 10px;
+  padding: 0;
+  margin: 20px 0 0 0;
+  list-style: none;
+}
+
+.skillsList li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.skillsList li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+  font-size: 14px;
+  line-height: 12px;
+}
+
 .imageWrapper {
   position: relative;
   width: 100%;
@@ -63,28 +91,29 @@
 .imageBox {
   position: relative;
   border-radius: 8px;
-  background-color: var(--accent-cyan);
+  background-color: var(--accent-blue);
   transition: all 0.3s ease;
-}
-
-.imageBox img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1);
-  transition: all 0.3s ease;
+  aspect-ratio: 1;
 }
 
-.imageOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.lottieContainer {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
   border-radius: 8px;
-  background-color: rgba(0, 180, 255, 0.3);
-  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+}
+
+.lottieContainer div {
+  width: 110% !important;
+  height: 110% !important;
 }
 
 .imageBox::after {
@@ -96,26 +125,28 @@
   height: 100%;
   border: 2px solid var(--accent-blue);
   border-radius: 8px;
-  z-index: -1;
+  z-index: 1;
   transition: all 0.3s ease;
 }
 
-.imageWrapper:hover .imageBox img {
-  filter: none;
-  mix-blend-mode: normal;
-}
-
-.imageWrapper:hover .imageOverlay {
-  background-color: transparent;
-}
-
 .imageWrapper:hover .imageBox::after {
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
+  border-color: var(--accent-cyan);
+}
+
+.imageWrapper:hover .lottieContainer {
+  transform: translate(-5px, -5px);
+  border-color: var(--accent-cyan);
 }
 
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .imageWrapper {
+    margin-top: 40px;
   }
 }
