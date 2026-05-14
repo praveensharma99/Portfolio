@@ -1,0 +1,110 @@
+.projectsSection {
+  padding: 100px 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+}
+
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.heading {
+  font-size: clamp(26px, 5vw, 32px);
+  color: #ccd6f6;
+  display: flex;
+  align-items: center;
+}
+
+.number {
+  color: var(--accent-blue);
+  font-family: monospace;
+  font-size: clamp(16px, 3vw, 20px);
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--card-border);
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover {
+  box-shadow: 0 10px 30px -15px var(--accent-cyan);
+  border-color: rgba(0, 255, 240, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.folderIcon {
+  color: var(--accent-blue);
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.links a {
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--accent-cyan);
+}
+
+.projectTitle {
+  font-size: 1.4rem;
+  color: #ccd6f6;
+  margin-bottom: 1rem;
+}
+
+.projectDesc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.techList li {
+  color: var(--accent-blue);
+}

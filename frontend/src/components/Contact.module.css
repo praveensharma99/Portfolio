@@ -1,0 +1,142 @@
+.contactSection {
+  padding: 100px 2rem 50px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  color: var(--accent-blue);
+  font-family: monospace;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(30px, 5vw, 50px);
+  color: #ccd6f6;
+  margin-bottom: 1.5rem;
+}
+
+.desc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoCard {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.infoLink:hover {
+  color: var(--accent-cyan);
+  transform: translateX(5px);
+}
+
+.icon {
+  color: var(--accent-blue);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 10px rgba(0, 180, 255, 0.2);
+}
+
+.submitBtn {
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: rgba(0, 255, 240, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 240, 0.4);
+  transform: translateY(-3px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.successMsg {
+  color: #4CAF50;
+  margin-top: 1rem;
+}
+
+.errorMsg {
+  color: #f44336;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .submitBtn {
+    width: 100%;
+  }
+}
