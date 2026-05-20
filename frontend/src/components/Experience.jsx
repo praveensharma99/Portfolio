@@ -38,7 +38,7 @@ const Experience = () => {
             
             <ul className={styles.bulletPoints}>
               <li>
-                Built 2+ MERN apps, achieving 20% faster turnaround via reusable React component libraries.
+                Built 3+ MERN apps, achieving 20% faster turnaround via reusable React component libraries.
               </li>
               <li>
                 Designed 10+ robust RESTful APIs with Express.js, systematically tested via Postman for reliability.
