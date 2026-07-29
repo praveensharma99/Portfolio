@@ -58,6 +58,16 @@ const About = () => {
               <li>TypeScript</li>
               <li>Tailwind CSS</li>
             </ul>
+
+            <div className={styles.buttonGroup}>
+              <a 
+                href="/assets/Praveen_Sharma_Resume.pdf" 
+                download="Praveen_Sharma_Resume.pdf"
+                className={styles.resumeBtn}
+              >
+                Download Resume
+              </a>
+            </div>
           </div>
 
           <div className={styles.imageWrapper}>

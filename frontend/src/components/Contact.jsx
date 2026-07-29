@@ -57,11 +57,17 @@ const Contact = () => {
             <div className={`glass-panel ${styles.infoCard}`}>
               <a href="mailto:praveensharma4448@gmail.com" className={styles.infoLink}>
                 <FiMail size={24} className={styles.icon} />
-                <span>praveensharma4448@gmail.com</span>
+                <div className={styles.infoText}>
+                  <p className={styles.infoLabel}>Email</p>
+                  <p className={styles.infoValue}>praveensharma4448@gmail.com</p>
+                </div>
               </a>
               <a href="tel:+918360428961" className={styles.infoLink}>
                 <FiPhone size={24} className={styles.icon} />
-                <span>+91 8360428961</span>
+                <div className={styles.infoText}>
+                  <p className={styles.infoLabel}>Phone</p>
+                  <p className={styles.infoValue}>+91 8360428961</p>
+                </div>
               </a>
               <a href="https://linkedin.com/in/praveen-sharma4448" target="_blank" rel="noreferrer" className={styles.infoLink}>
                 <FiLinkedin size={24} className={styles.icon} />

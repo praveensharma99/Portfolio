@@ -66,6 +66,26 @@
   transform: translateX(5px);
 }
 
+.infoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoLabel {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--accent-blue);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.infoValue {
+  font-size: 15px;
+  color: var(--text-primary);
+  margin: 2px 0 0 0;
+  line-height: 1.2;
+}
+
 .icon {
   color: var(--accent-blue);
 }

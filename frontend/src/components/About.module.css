@@ -140,6 +140,29 @@
   border-color: var(--accent-cyan);
 }
 
+.buttonGroup {
+  margin-top: 30px;
+}
+
+.resumeBtn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: transparent;
+  color: var(--accent-blue);
+  border: 1px solid var(--accent-blue);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resumeBtn:hover {
+  background: rgba(0, 180, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 180, 255, 0.3);
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;
